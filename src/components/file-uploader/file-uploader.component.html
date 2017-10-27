@@ -1,0 +1,18 @@
+<div>
+  <div class="input-group">
+    <input type="text" class="form-control" readonly [(ngModel)]="value">
+    <div class="input-group-btn">
+
+      <div class="btn btn-default image-preview-input">
+        <span class="glyphicon glyphicon-folder-open"></span>
+        <span class="image-preview-input-title">Take Photo</span>
+        <input type="file" accept="image/png, image/jpeg, image/gif" (blur)="onBlur()" name="input-file-preview" (change)="onChange($event)"
+        />
+        <!-- rename it -->
+      </div>
+      <button *ngIf="value" type="button" (click)="clear()" class="btn btn-default image-preview-clear">
+                        <span class="glyphicon glyphicon-remove"></span> Clear
+    </button>
+    </div>
+  </div>
+</div>
